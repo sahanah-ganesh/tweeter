@@ -64,15 +64,11 @@ $(document).ready(function() {
 
     event.preventDefault();
 
-    // var tweetLength = $('#new-tweet').val().length;
+    var tweetLength = $('#new-tweet').val().length;
 
-    // if (tweetLength < 1) {
-
-    // }
-
-
-
-    let inputLength = $(this).val().length;
+    if (tweetLength > 140 || !tweetLength) {
+      return alert("Must be no more than 140 characters and no less than 1");
+    }
 
     console.log('Form submitted, performing ajax call...');
     var queryStr = $(this).serialize();
