@@ -22,7 +22,7 @@
 
     <!-- Tweet CSS -->
 
-    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- icon links -->
 
@@ -59,13 +59,13 @@
 
         <h2>Compose Tweet</h2>
 
-       <form method="POST" action="/tweets/">
+        <form id="create-new-tweet" method="POST" action="/tweets/">
 
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <textarea id="new-tweet" name="text" placeholder="What are you humming about?"></textarea>
 
-        <input type="submit" value="Tweet">
+        <input type="submit" value="Tweet" >
 
-          <span id="character" class="counter">140</span>
+        <span id="character" class="counter">140</span>
 
        </form>
 
@@ -73,7 +73,7 @@
 
       <section class="tweets-container">
 
-        <article class="tweet">
+ <!--        <article class="tweet">
 
           <header>
 
@@ -101,7 +101,7 @@
 
           </footer>
 
-        </article>
+        </article> -->
 
       </section>
       </main>

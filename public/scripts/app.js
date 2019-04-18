@@ -6,8 +6,6 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 
-$(document).ready(function() {
-
 const data = [
   {
     "user": {
@@ -55,17 +53,18 @@ const data = [
   }
 ];
 
-function renderTweets(tweets) {
+$(document).ready(function() {
 
-  for (tweet of tweets) {
+  function renderTweets(tweets) {
 
-    let $tweet = createTweetElement(tweet);
-    $('.tweets-container').append($tweet);
+    for (tweet of tweets) {
+
+      let $tweet = createTweetElement(tweet);
+      $('.tweets-container').append($tweet);
 
       console.log(tweet);
-
+    }
   }
-}
 
   function createTweetElement(tweet) {
 
@@ -73,7 +72,6 @@ function renderTweets(tweets) {
     let {name, avatars, handle} = user;
     let {text} = content;
     let src = avatars.regular;
-
 
     $tweet = $('<article>').addClass('tweet');
     $header = $('<header>');
@@ -105,11 +103,32 @@ function renderTweets(tweets) {
     $tweet.append($pExample);
     $tweet.append($footer);
 
+    return $tweet;
+  }
 
-  return $tweet;
-}
+  renderTweets(data);
 
-renderTweets(data);
+
+  var $form = $('#create-new-tweet');
+  $form.on('submit', function(event) {
+
+    event.preventDefault();
+    console.log('Form submitted, performing ajax call...');
+    var queryStr = $(this).serialize();
+    console.log($(this).serialize());
+
+    $.ajax({ url:     '/tweets/',
+             method:  'POST',
+             data:    queryStr,
+             success: function(data) {
+              console.log('New tweet: ', data);
+              $('#create-new-tweet').val('');
+              renderTweets(data);
+             }
+          })
+    })
+
 
 
 });
+
