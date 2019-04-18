@@ -1,0 +1,78 @@
+.tweet {
+  background-color: #eee;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align:
+}
+
+.tweet header {
+  background-color: #eee;
+  display: flex;
+}
+
+.tweet .avatar {
+  height: 40px;
+  width: 40px;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.tweet h3 {
+  flex-wrap: wrap;
+  font-size: 1em;
+  margin-top: 20px;
+  margin: auto;
+  width: 150px;
+  padding: 1px;
+}
+
+.tweet h5 {
+  text-align: right;
+  margin-right: 10px;
+  font-size: 60%;
+  font-weight: 100;
+}
+
+.tweet .tweet-text {
+  background-color: white;
+  padding: 2em;
+  border: 1px lightgrey;
+  margin: 0px;
+}
+
+.tweet footer {
+  border: 1px solid grey
+  height: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+}
+
+.tweet .date {
+  font-size: 85%;
+  text-align: left;
+  margin-left: 5px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+.tweet .icons {
+  margin-left: 5px;
+  margin-top: 5px;
+  color: grey;
+  opacity: 0;
+}
+
+.tweet:hover {
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+.tweet:hover .icons {
+  opacity: 100;
+}
