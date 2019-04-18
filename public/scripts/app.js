@@ -77,12 +77,12 @@ function renderTweets(tweets) {
 
     $tweet = $('<article>').addClass('tweet');
     $header = $('<header>');
-    $img = $('<img>').addClass('avatar').attr("src");
+    $img = $('<img>').addClass('avatar').attr('src', src);
     $h3 = $('<h3>').text(name);
     $h5 = $('<h5>').text(handle);
-    $p = $('<p>').addClass('tweet-text').text(text);
+    $pExample = $('<p>').addClass('tweet-text').text(text);
     $footer = $('<footer>');
-    $span = $('<span>').text(created_at);
+    $pDate = $('<p>').addClass('date').text(created_at);
     $div = $('<div>').addClass('icons');
     $iconFlag = $(`<i class='fa fa-flag'></i>`);
     $iconRetweet = $(`<i class='fa fa-retweet'></i>`);
@@ -93,7 +93,7 @@ function renderTweets(tweets) {
     $header.append($h3);
     $header.append($h5);
 
-    $footer.append($span);
+    $footer.append($pDate);
 
     $div.append($iconFlag);
     $div.append($iconRetweet);
@@ -102,7 +102,7 @@ function renderTweets(tweets) {
     $footer.append($div);
 
     $tweet.append($header);
-    $tweet.append($p);
+    $tweet.append($pExample);
     $tweet.append($footer);
 
 
@@ -113,39 +113,3 @@ renderTweets(data);
 
 
 });
-    // <article>
-
-    //       <header>
-
-    //         <img class="avatar" src="/images/bird.png">
-
-    //         <h3>Sahanah</h3>
-
-    //         <h5>@Sahanah</h5>
-
-    //       </header>
-
-    //           <p class='tweet-text'>Little tweet here</p>
-
-    //       <footer>
-
-    //         <span id="date" class="months">days ago</span>
-
-    //         <div class="icons">
-    //           <i class="fa fa-flag" aria-hidden="true"></i>
-    //           <i class="fa fa-retweet" aria-hidden="true"></i>
-    //           <i class="fa fa-heart" aria-hidden="true"></i>
-    //         </div>
-
-    //       </footer>
-
-    //     </article>
-
-
-
-
-  // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-
-
