@@ -9,14 +9,16 @@
 
 $(document).ready(function() {
 
+  loadTweets();
+
   function renderTweets(tweets) {
 
+    var tweetContainer = $('.tweets-container')
+    tweetContainer.empty();
+
     for (tweet of tweets) {
-
       let $tweet = createTweetElement(tweet);
-      $('.tweets-container').append($tweet);
-
-      console.log($tweet);
+      tweetContainer.prepend($tweet);
     }
   }
 
@@ -58,6 +60,7 @@ $(document).ready(function() {
 
     return $tweet;
   }
+
 
   var $form = $('#create-new-tweet');
   $form.on('submit', function(event) {
