@@ -12,11 +12,11 @@ $(document).ready(function() {
 
     if (inputLength >= maximum) {
 
-      $("#character", this.parentElement).text(count).addClass("setRed");
+      $(".counter", this.parentElement).text(count).addClass("setRed");
 
     } else {
 
-      $("#character", this.parentElement).text(count).removeClass("setRed");
+      $(".counter", this.parentElement).text(count).removeClass("setRed");
     }
   })
 });

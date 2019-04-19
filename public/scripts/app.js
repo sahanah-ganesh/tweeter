@@ -77,13 +77,13 @@ $(document).ready(function() {
     var tweetLength = $('#tweet-area').val().length;
 
     if (tweetLength > 140) {
-      return
+      $('#error').text("Tweet longer than 140 characters").slideToggle(true);
+      return;
     }
 
     if (!tweetLength) {
-
-    }
-      return alert("Must be no more than 140 characters and no less than 1");
+      $('#error').text("Please enter a tweet").slideToggle(true);
+      return;
     }
 
     console.log('Form submitted, performing ajax call...');
@@ -97,7 +97,12 @@ $(document).ready(function() {
                 loadTweets();
              }
           })
-    })
+
+    $('#error').text("").slideToggle(false);
+    $('<textarea>').val("").focus();
+    $('.counter').text("140");
+
+  })
 
   function loadTweets() {
 
