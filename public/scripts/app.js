@@ -9,7 +9,14 @@
 
 $(document).ready(function() {
 
+  $('<textarea>').focus();
+
   loadTweets();
+
+  $('#nav-bar button').on('click', (function() {
+    $('.new-tweet').slideToggle('slow');
+    $('#tweet-area').focus();
+  }));
 
   function renderTweets(tweets) {
 
@@ -67,9 +74,15 @@ $(document).ready(function() {
 
     event.preventDefault();
 
-    var tweetLength = $('#new-tweet').val().length;
+    var tweetLength = $('#tweet-area').val().length;
 
-    if (tweetLength > 140 || !tweetLength) {
+    if (tweetLength > 140) {
+      return
+    }
+
+    if (!tweetLength) {
+
+    }
       return alert("Must be no more than 140 characters and no less than 1");
     }
 
@@ -80,6 +93,7 @@ $(document).ready(function() {
              method:  'POST',
              data:    queryStr,
              success: function() {
+                $('textarea').val("");
                 loadTweets();
              }
           })

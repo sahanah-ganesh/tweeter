@@ -7,11 +7,12 @@
 }
 
 .tweet header {
-  background-color: #eee;
   display: flex;
+  background-color: #eee;
 }
 
 .tweet .avatar {
+  order: 1;
   height: 40px;
   width: 40px;
   border-radius: 5px;
@@ -24,16 +25,14 @@
 }
 
 .tweet h3 {
-  flex-wrap: wrap;
+  order: 2;
   font-size: 1em;
-  margin-top: 20px;
   margin: auto;
-  width: 150px;
-  padding: 1px;
   color: grey;
 }
 
 .tweet h5 {
+  order: 3;
   text-align: right;
   margin-right: 10px;
   font-size: 60%;

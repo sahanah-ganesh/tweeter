@@ -47,6 +47,8 @@
 
       <span class="header">Tweeter</span>
 
+      <button type="submit"><i class="fas fa-retweet"></i> Compose</button>
+
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -59,11 +61,13 @@
 
         <form id="create-new-tweet" method="POST" action="/tweets">
 
-        <textarea id="new-tweet" name="text" placeholder="What are you humming about?"></textarea>
+        <textarea id="tweet-area" name="text" placeholder="What are you humming about?"></textarea>
 
-        <input type="submit" value="Tweet" >
+        <input type="submit" value="Tweet">
 
         <span id="character" class="counter">140</span>
+
+        <p id="error"></p>
 
        </form>
 
