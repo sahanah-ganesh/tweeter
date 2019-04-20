@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('textarea').focus();
+    $('.new-tweet').slideUp();
     $('textarea').keyup(function() {
         $('#error').slideUp()
     });
