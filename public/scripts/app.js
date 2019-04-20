@@ -1,12 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-// Test / driver code (temporary). Eventually will get this from the server.
-
-
 $(document).ready(function() {
 
   $('textarea').focus();
@@ -72,8 +63,8 @@ $(document).ready(function() {
   }
 
 
-  var $form = $('#create-new-tweet');
-  $form.on('submit', function(event) {
+  var form = $('#create-new-tweet');
+  form.on('submit', function(event) {
 
     event.preventDefault();
 
@@ -89,31 +80,32 @@ $(document).ready(function() {
       return;
     }
 
-    // $('#error').text("").slideToggle(false);
-    $('<textarea>').val("").focus();
-    $('.counter').text("140");
+
 
     console.log('Form submitted, performing ajax call...');
     var queryStr = $(this).serialize();
 
-    $.ajax({ url:     '/tweets',
-             method:  'POST',
-             data:    queryStr,
-             success: function() {
-                $('textarea').val("");
-                loadTweets();
-             }
-          })
+    $.ajax({
+       url:     '/tweets',
+       method:  'POST',
+       data:    queryStr,
+       success: function() {
+          $('textarea').val("").focus();
+          $('.counter').text("140");
+          loadTweets();
+       }
+    })
   })
 
   function loadTweets() {
 
-    $.ajax({ url:      '/tweets',
-             method:   'GET',
-             success:   function(tweets) {
-                          renderTweets(tweets);
-                        }
-           })
+    $.ajax({
+      url:      '/tweets',
+      method:   'GET',
+      success:   function(tweets) {
+        renderTweets(tweets);
+      }
+    })
   }
 });
 
