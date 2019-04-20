@@ -28,8 +28,10 @@ Allows users to compose and post tweets and see a feed of tweets with earlier tw
 4. Go to <http://localhost:8080/> in your browser.
 
 
-!["Tweeter Front Page"]( . )
+!["Tweeter Front Page"](https://github.com/sahanah-ganesh/tweeter/blob/master/public/images/Screen%20Shot%202019-04-20%20at%205.21.42%20PM.png)
 
-!["Tweeter Page Once Compose Clicked"]( .    )
+!["Tweeter Page Once Compose Clicked"](https://github.com/sahanah-ganesh/tweeter/blob/master/public/images/Screen%20Shot%202019-04-20%20at%205.22.52%20PM.png)
 
-!["Tweeter Page Error Message"]( .    )
+!["Tweeter Page Error Message"](https://github.com/sahanah-ganesh/tweeter/blob/master/public/images/Screen%20Shot%202019-04-20%20at%205.23.13%20PM.png)
+
+!["Tweeter Page After Submitting New Tweet"](https://github.com/sahanah-ganesh/tweeter/blob/master/public/images/Screen%20Shot%202019-04-20%20at%205.25.01%20PM.png)
