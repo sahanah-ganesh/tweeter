@@ -1,36 +1,36 @@
 .new-tweet {
-  background-color: #eee;
-  border: 2px solid lightgrey;
-  border-radius: 5px;
-  padding: 10px;
+    background-color: #eee;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .new-tweet h2 {
-  border-bottom: 1px solid black;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  text-align: left;
+    border-bottom: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 .new-tweet textarea {
-  padding: 5px;
-  width: 100%;
+    padding: 5px;
+    width: 100%;
 }
 
 .counter {
-  font-size: 85%;
-  font-style: italic;
-  float: right;
+    font-size: 85%;
+    font-style: italic;
+    float: right;
 }
 
 .setRed {
-  color: red;
+    color: red;
 }
 
 #error {
-  display: none;
-  color: red;
-  font-size: 70%;
-  padding-top: 5px;
-  margin: 0px;
+    display: none;
+    color: red;
+    font-size: 70%;
+    padding-top: 5px;
+    margin: 0px;
 }
