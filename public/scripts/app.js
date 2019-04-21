@@ -85,7 +85,7 @@ $(document).ready(function() {
             return;
         }
 
-        if (!tweetLength) {
+        if (!tweetLength || tweetLength === '') {
             $('#error').text("Please enter a tweet").slideDown();
             return;
         }
