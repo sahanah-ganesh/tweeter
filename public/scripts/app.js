@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $('.new-tweet').slideUp();
-    $('textarea').keyup(function() {
+    $('#tweet-area').keyup(function() {
         $('#error').slideUp()
     });
 
@@ -78,19 +78,17 @@ $(document).ready(function() {
 
         event.preventDefault();
 
-        var tweetLength = $('#tweet-area').val().length;
+        var tweetMsg = $('#tweet-area').val();
 
-        if (tweetLength > 140) {
+        if (tweetMsg.length > 140) {
             $('#error').text("Tweet longer than 140 characters").slideDown();
             return;
         }
 
-        if (!tweetLength || $('#tweet-area').val("")) {
+        if (tweetMsg.length === 0 || !tweetMsg.trim()) {
             $('#error').text("Please enter a tweet").slideDown();
             return;
         }
-
-
 
         console.log('Form submitted, performing ajax call...');
         var queryStr = $(this).serialize();
@@ -100,7 +98,7 @@ $(document).ready(function() {
             method: 'POST',
             data: queryStr,
             success: function() {
-                $('textarea').val("").focus();
+                $('#tweet-area').val("").focus();
                 $('.counter').text("140");
                 loadTweets();
             }
