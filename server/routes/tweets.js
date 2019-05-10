@@ -1,5 +1,7 @@
 "use strict";
 
+require('dotenv').config();
+
 const userHelper = require("../lib/util/user-helper")
 
 const express = require('express');
