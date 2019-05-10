@@ -1,95 +1,96 @@
 .tweet {
-  background-color: #eee;
-  border: 2px solid lightgrey;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-bottom: 10px;
+    background-color: #eee;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .tweet header {
-  display: flex;
-  background-color: #eee;
+    display: flex;
+    background-color: #eee;
 }
 
 .tweet .avatar {
-  order: 1;
-  height: 40px;
-  width: 40px;
-  border-radius: 5px;
-  margin-left: 2px;
-  margin-bottom: 2px;
-  margin-top: 2px;
-  margin-right: 2px;
-  margin-left: 2px;
-  opacity: 0.5;
+    order: 1;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+    opacity: 0.5;
 }
 
 .tweet h3 {
-  order: 2;
-  font-size: 1em;
-  margin: auto;
-  color: grey;
+    order: 2;
+    font-size: 1em;
+    margin: auto;
+    color: grey;
 }
 
 .tweet h5 {
-  order: 3;
-  text-align: right;
-  margin-right: 10px;
-  font-size: 60%;
-  font-weight: 100;
-  color: grey;
+    order: 3;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 60%;
+    font-weight: 100;
+    color: grey;
 }
 
 .tweet .tweet-text {
-  background-color: white;
-  padding: 2em;
-  border: 1px lightgrey;
-  margin: 0px;
+    background-color: white;
+    padding: 2em;
+    border: 1px lightgrey;
+    margin: 0px;
+    word-wrap: break-word;
 }
 
 .tweet footer {
-  border-top: 1px solid lightgrey;
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
+    border-top: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
 }
 
 .tweet .date {
-  flex-wrap: wrap;
-  font-size: 70%;
-  text-align: left;
-  margin-left: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0px;
+    flex-wrap: wrap;
+    font-size: 70%;
+    text-align: left;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0px;
 }
 
 .tweet .icons {
-  flex-wrap: wrap;
-  margin-right: 0.5em;
-  margin-top: 0.2em;
-  margin-bottom: 0px;
-  color: grey;
-  opacity: 0;
+    flex-wrap: wrap;
+    margin-right: 0.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0px;
+    color: grey;
+    opacity: 0;
 }
 
 .tweet:hover {
-  border: 2px solid grey;
-  border-radius: 5px;
+    border: 2px solid grey;
+    border-radius: 5px;
 }
 
 .tweet:hover h3 {
-  color: black;
+    color: black;
 }
 
 .tweet:hover h5 {
-  color: black;
+    color: black;
 }
 
 .tweet:hover .avatar {
-  opacity: 1;
+    opacity: 1;
 }
 
 .tweet:hover .icons {
-  opacity: 1;
-  color: #00a087;
+    opacity: 1;
+    color: #00a087;
 }

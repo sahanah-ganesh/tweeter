@@ -1,26 +1,25 @@
 $(document).ready(function() {
 
-  $("textarea").on("keyup", function(event) {
+    $("textarea").on("keyup", function(event) {
 
-    let inputLength = $(this).val().length;
+        let inputLength = $(this).val().length;
 
-    let maximum = 140;
+        let maximum = 140;
 
-    let count = maximum - inputLength;
+        let count = maximum - inputLength;
 
-    //console.log event here
+        //console.log event here
 
-    if (inputLength >= maximum) {
+        if (inputLength >= maximum) {
 
-      $(".counter", this.parentElement).text(count).addClass("setRed");
+            $(".counter", this.parentElement).text(count).addClass("setRed");
 
-    } else {
+        } else {
 
-      $(".counter", this.parentElement).text(count).removeClass("setRed");
-    }
-  })
+            $(".counter", this.parentElement).text(count).removeClass("setRed");
+        }
+    })
 });
-
 
 
 
